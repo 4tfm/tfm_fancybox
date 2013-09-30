@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf8"?>
+<xtcommerceplugin>
+<title>Fancybox für xt:Commerce 4.1 - xtgrid</title>
+<version>1.0.0</version>
+<code>tfm_fancybox</code>
+<url>http://www.4tfm.de</url>
+<description>tfm_fancybox</description>
+<type>extension</type>
+<icon>4tfm.jpg</icon>
+<db_install><![CDATA[
+]]></db_install>
+<db_uninstall><![CDATA[
+]]></db_uninstall>
+<plugin_code>
+<code>
+<hook>index_footer_tpl</hook>
+<phpcode><![CDATA[
+require _SRV_WEBROOT.'plugins/tfm_fancybox/hooks/index_footer_tpl.php';
+]]></phpcode>
+<order>1</order>
+<active>1</active>
+</code>
+<code>
+<hook>javascript.php:bottom</hook>
+<phpcode><![CDATA[
+require _SRV_WEBROOT.'plugins/tfm_fancybox/hooks/javascript.phpbottom.php';
+]]></phpcode>
+<order>1</order>
+<active>1</active>
+</code>
+<code>
+<hook>styles.php:bottom</hook>
+<phpcode><![CDATA[
+require _SRV_WEBROOT.'plugins/tfm_fancybox/hooks/styles.phpbottom.php';
+]]></phpcode>
+<order>1</order>
+<active>1</active>
+</code>
+</plugin_code>    
+<configuration>
+<config>
+<key>TFM_FB_FREE_CHECK</key>
+<type>dropdown</type>
+<url>conf_truefalse</url>
+<value>true</value>
+<de>
+<title>Für Mandant Aktivieren</title>
+</de>
+<en>
+<title>Activate for sub-shop</title>
+</en>
+</config>
+</configuration>
+</xtcommerceplugin>
